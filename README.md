@@ -53,7 +53,7 @@ Recomendado: que los anuncios que apunten aquí usen UTMs, p. ej.
 
 ## Pendientes
 
-- [x] Fotos reales en `assets/` (experiencia tras el hero; la mesa en "Y hay algo más").
+- [x] Fotos reales en `assets/` (experiencia tras el hero; la mesa en "Y hay algo más"; la conversación en la sección 5).
 - [ ] Imagen Open Graph 1200×630 (`assets/og.jpg`) y descomentar las etiquetas `og:image` en `index.html`.
 - [ ] Meta Pixel / Analytics, cuando exista uno autorizado.
 - [ ] Dominio propio (opcional).
