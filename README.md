@@ -1,58 +1,59 @@
 # Desayuno Financiero — Landing (V1)
 
-Landing page del **Desayuno Financiero** (Golden Group — José Orozco y Yancy Vargas, Irving TX, sábados 10 AM).
+Landing del **Desayuno Financiero** (Irving, TX · sábados 10:00 AM).
+Una sola función: **convertir interés en una conversación de WhatsApp.**
 
-## Qué es esto
+Producción: https://desayuno-financiero-landing.vercel.app
+Deploy: Vercel, automático en cada push a `main`.
 
-Repositorio **independiente**, separado por diseño del vault/cerebro de Orozco Legacy (`cerebro`). No contiene, referencia ni importa ningún archivo, dato, credencial o información de ese otro repositorio — es un proyecto limpio, propio de este sitio.
-
-## Estado actual (V1 — scaffold)
-
-Este commit inicial es **solo estructura**, no contenido final:
-
-- HTML/CSS/JS plano, sin framework ni build step.
-- Los textos de `index.html` son **placeholders** (marcados con `[...]` y comentarios `<!-- TODO -->`). El copy definitivo, la arquitectura de conversión (qué secciones, qué oferta, qué llamado a la acción) y la dirección visual (colores, tipografía, imágenes) todavía se están definiendo — ver `Brand Book` pendiente en el cerebro.
-- Sin integración con Cloudflare, DNS ni dominio todavía — eso es un paso posterior, deliberadamente no hecho en este commit.
+Repositorio independiente: no contiene ni referencia datos del vault/cerebro.
 
 ## Estructura
 
 ```
-desayuno-financiero-landing/
-├── index.html        # estructura de la página (contenido placeholder)
-├── css/
-│   └── styles.css    # estilos base (sin dirección visual definitiva)
-├── js/
-│   └── main.js        # JS mínimo (sin lógica de conversión definitiva)
-├── assets/            # imágenes/recursos (vacío por ahora)
-├── .gitignore
-└── README.md
+index.html      # todo el contenido (HTML semántico, sin framework)
+css/styles.css  # estilos mobile-first, sin fuentes externas
+js/main.js      # tracking preparado + año del footer
+assets/         # fotos reales (vacío por ahora)
 ```
 
-## Ver el sitio en local
+Ver en local: `python -m http.server 8080` → http://localhost:8080
 
-No hace falta ningún build. Dos opciones:
+## WhatsApp
 
-1. Abrir `index.html` directamente en el navegador.
-2. O, si prefieres un server local simple (recomendado para que las rutas relativas se comporten igual que en producción):
-   ```
-   python -m http.server 8080
-   ```
-   y abrir `http://localhost:8080`.
+Los dos botones (hero y final) apuntan al mismo enlace:
 
-## Despliegue (pendiente, no configurado todavía)
+```
+https://wa.me/14694357527?text=<mensaje codificado>
+```
 
-La idea es Git → Cloudflare Pages (auto-deploy en cada push a la rama principal). Pasos para cuando se decida avanzar:
+Mensaje prellenado: *"Hola, vi la página del Desayuno Financiero y me gustaría reservar un lugar para el próximo sábado."*
 
-1. Repo en GitHub (hecho).
-2. Cloudflare dashboard → **Workers & Pages → Create → Pages → Connect to Git** → autorizar GitHub → elegir este repo.
-3. Build command: (ninguno — sitio estático). Build output directory: `/` (raíz del repo).
-4. Deploy.
+Es distinto al mensaje del anuncio click-to-WhatsApp (*"vi la publicación…"*): así, dentro de WhatsApp se distingue si el lead llegó por la landing o directo del anuncio.
 
-Dominio/DNS personalizados: pendiente, se define después de validar el sitio en el subdominio gratuito de Cloudflare Pages.
+Para cambiar número o mensaje: editar el `href` de los dos `.cta` en `index.html`.
 
-## Pendiente antes de la V1 real
+## Tracking
 
-- [ ] Arquitectura de conversión y contenido (José + Partner) — qué secciones, qué oferta, qué CTA.
-- [ ] Dirección visual / Brand Book de Orozco Legacy — colores, tipografía, tono visual.
-- [ ] Definir a dónde apunta el CTA principal (WhatsApp directo, formulario, calendario).
-- [ ] Conectar el repo a Cloudflare Pages (sin configurar DNS/dominio todavía).
+No hay Pixel ni Analytics conectado (no existe uno autorizado para este proyecto). `js/main.js` ya dispara los eventos a `window.dataLayer`, y los manda a `fbq` / `gtag` solo si alguien los carga:
+
+| Evento | Cuándo |
+|---|---|
+| `landing_view` | carga de la página |
+| `whatsapp_click_hero` | clic en botón del hero |
+| `whatsapp_click_final` | clic en botón final |
+| `whatsapp_click` | total de clics a WhatsApp (se dispara junto con cualquiera de los dos; con Pixel también manda el estándar `Contact`) |
+
+Cada evento incluye los `utm_*` de la URL si existen. No se envía información personal.
+
+Para conectar Meta Pixel: pegar el snippet oficial (con el Pixel ID real) en el `<head>` de `index.html`, antes de `css/styles.css`. Nada más cambia.
+
+Recomendado: que los anuncios que apunten aquí usen UTMs, p. ej.
+`?utm_source=meta&utm_medium=paid&utm_campaign=gg_desayuno&utm_content=landing_v1`
+
+## Pendientes
+
+- [ ] Fotos reales en `assets/` (los espacios están preparados: abrir la página con `?fotos=1` para verlos).
+- [ ] Imagen Open Graph 1200×630 (`assets/og.jpg`) y descomentar las etiquetas `og:image` en `index.html`.
+- [ ] Meta Pixel / Analytics, cuando exista uno autorizado.
+- [ ] Dominio propio (opcional).

@@ -3,82 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Desayuno Financiero — Protección y Legado</title>
-  <meta name="description" content="[TODO: descripción definitiva pendiente — Partner + José]" />
+  <title>Desayuno Financiero | Irving, Texas</title>
+  <meta name="description" content="Una conversación sencilla sobre dinero, protección y decisiones financieras. Acompáñanos al Desayuno Financiero en Irving, Texas." />
+  <meta name="theme-color" content="#f7f1e8" />
+  <link rel="canonical" href="https://desayuno-financiero-landing.vercel.app/" />
+
+  <!-- Open Graph (WhatsApp / Facebook) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="Desayuno Financiero" />
+  <meta property="og:title" content="Desayuno Financiero | Irving, Texas" />
+  <meta property="og:description" content="Una conversación sencilla sobre dinero, protección y decisiones financieras. Sábados · 10:00 AM · Irving, Texas." />
+  <meta property="og:url" content="https://desayuno-financiero-landing.vercel.app/" />
+  <!-- PENDIENTE: imagen OG definitiva (foto real, 1200x630, en /assets/og.jpg).
+       Cuando exista, descomentar:
+  <meta property="og:image" content="https://desayuno-financiero-landing.vercel.app/assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Desayuno Financiero en Irving, Texas" />
+  -->
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%237a3e1d'/%3E%3Ctext x='16' y='21.5' font-family='Georgia,serif' font-size='14' text-anchor='middle' fill='%23f7f1e8'%3EDF%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!-- ============================================= -->
-  <!-- TODO: Todo el contenido de esta página es PLACEHOLDER.
-       La arquitectura de conversión, el copy y la dirección
-       visual definitivos los define Partner + José antes de V1 real. -->
-  <!-- ============================================= -->
-
-  <header class="site-header">
-    <div class="container">
-      <span class="logo">[Logo / Golden Group]</span>
-      <!-- TODO: nav opcional, probablemente innecesaria en una landing de una sola página -->
-    </div>
-  </header>
-
   <main>
 
-    <!-- Hero / arriba del pliegue -->
-    <section class="hero">
+    <!-- 1 · HERO -->
+    <section class="hero" aria-labelledby="titulo">
       <div class="container">
-        <h1>[Titular principal — pendiente]</h1>
-        <p class="subtitle">[Subtítulo / propuesta de valor — pendiente]</p>
-        <a class="cta-button" href="#reservar">[Texto del CTA principal — pendiente]</a>
+        <p class="eyebrow">Desayuno Financiero</p>
+        <h1 id="titulo">Hay cosas sobre el dinero que aprendemos demasiado tarde.</h1>
+        <p class="lead">Y muchas veces no porque sean complicadas…<br />sino porque nadie se sentó a explicárnoslas.</p>
+        <p>Una conversación sencilla sobre dinero, protección y las decisiones que pueden ayudarnos a construir nuestro futuro con mayor intención.</p>
+
+        <p class="when">Sábados · 10:00 AM · Irving, Texas</p>
+
+        <!-- Ambos CTAs van al mismo WhatsApp. El href funciona aunque falle el JS. -->
+        <a class="cta" href="https://wa.me/14694357527?text=Hola%2C%20vi%20la%20p%C3%A1gina%20del%20Desayuno%20Financiero%20y%20me%20gustar%C3%ADa%20reservar%20un%20lugar%20para%20el%20pr%C3%B3ximo%20s%C3%A1bado." target="_blank" rel="noopener" data-track="whatsapp_click_hero">Quiero reservar mi lugar</a>
+        <p class="micro">Reserva por WhatsApp · Lugares limitados</p>
       </div>
     </section>
 
-    <!-- Detalles del evento -->
-    <section class="event-details">
+    <!-- Espacio para foto real. Oculto en producción hasta que José entregue
+         material; se ve con ?fotos=1 en la URL. Ver README. -->
+    <figure class="photo-slot" data-photo-slot hidden>
+      <span>FOTO REAL PENDIENTE — la mesa del desayuno (assets/mesa.jpg)</span>
+    </figure>
+
+    <!-- 2 · NO NECESITAS SER EXPERTO -->
+    <section aria-labelledby="s2">
       <div class="container">
-        <h2>[Título de sección — ej. "El evento"]</h2>
-        <ul>
-          <li><strong>Cuándo:</strong> [día / hora — pendiente confirmar si se publica fijo o por ocurrencia]</li>
-          <li><strong>Dónde:</strong> [dirección — pendiente decidir si va pública aquí o solo al reservar]</li>
-          <li><strong>Con quién:</strong> [José Orozco y Yancy Vargas — confirmar cómo se presentan]</li>
+        <h2 id="s2">No necesitas ser experto en finanzas.</h2>
+        <p>De hecho, ésa es la idea.</p>
+        <p>Vamos a hablar de conceptos financieros en español, de manera sencilla y sin asumir que ya deberías saberlos.</p>
+        <p>Durante el desayuno pondremos sobre la mesa temas como:</p>
+        <ul class="list">
+          <li>cómo proteger lo que estás construyendo;</li>
+          <li>herramientas y estrategias que existen para prepararte para el futuro;</li>
+          <li>preguntas que vale la pena empezar a hacer sobre tu dinero;</li>
+          <li>cómo tomar decisiones financieras con mayor información y claridad.</li>
         </ul>
+        <blockquote class="pull">
+          <p>No venimos a decirte cómo vivir tu vida.</p>
+          <p>Venimos a poner información sobre la mesa para que tú puedas decidir qué tiene sentido para la tuya.</p>
+        </blockquote>
       </div>
     </section>
 
-    <!-- Propuesta de valor / por qué venir -->
-    <section class="value-prop">
+    <!-- 3 · ALGO MÁS PASA EN LA MESA -->
+    <section class="tinted" aria-labelledby="s3">
       <div class="container">
-        <h2>[Por qué asistir — pendiente]</h2>
-        <p>[Contenido pendiente — basarse en lo aprendido de la campaña: causa antes que marca, sin urgencia/escasez, tono cálido — ver reglas de Orozco Legacy / Brand Book antes de escribir esto.]</p>
+        <h2 id="s3">Y hay algo más.</h2>
+        <p>Cuando comenzamos estos desayunos pensábamos principalmente en compartir educación financiera.</p>
+        <p>Pero empezó a ocurrir algo que nos gustó mucho.</p>
+        <p class="beats">
+          <span>Las personas comenzaron a hablar entre ellas.</span>
+          <span>A conocerse.</span>
+          <span>A descubrir intereses e industrias en común.</span>
+          <span>A compartir experiencias, contactos e ideas.</span>
+        </p>
+        <p>Por eso queremos que ésta siga siendo una mesa donde puedas aprender, pero también donde puedas conocer personas que, igual que tú, están intentando construir algo mejor.</p>
+        <p class="beats">
+          <span>Quizá encuentres una idea.</span>
+          <span>Quizá una respuesta.</span>
+          <span>Quizá conozcas a un futuro cliente, colaborador o amigo.</span>
+        </p>
+        <p class="emphasis">Uno nunca sabe quién puede estar sentado a su lado.</p>
       </div>
     </section>
 
-    <!-- Prueba social (placeholder — pendiente decidir si aplica y qué mostrar) -->
-    <section class="social-proof">
+    <!-- 4 · PARA QUIÉN ES -->
+    <section aria-labelledby="s4">
       <div class="container">
-        <h2>[Testimonios / resultados — pendiente, opcional]</h2>
+        <h2 id="s4">Tal vez esta mesa sea para ti si alguna vez has pensado…</h2>
+        <p class="quote">“Siento que debería entender mejor qué hacer con mi dinero.”</p>
+        <p>O si:</p>
+        <ul class="list">
+          <li>trabajas duro y quieres que ese esfuerzo construya algo;</li>
+          <li>tienes familia y quieres conocer formas de proteger lo que estás construyendo;</li>
+          <li>estás comenzando de nuevo;</li>
+          <li>tienes un negocio o sueñas con construir uno;</li>
+          <li>simplemente tienes preguntas y quieres aprender.</li>
+        </ul>
+        <p class="emphasis">No importa cuánto ganes ni cuánto sepas de finanzas.</p>
+        <p>Puedes venir a escuchar, preguntar y sacar tus propias conclusiones.</p>
       </div>
     </section>
 
-    <!-- CTA de reservación -->
-    <section id="reservar" class="reserve">
+    <!-- 5 · QUÉ TIPO DE EXPERIENCIA ES -->
+    <section class="tinted" aria-labelledby="s5">
       <div class="container">
-        <h2>[Llamado a la acción final — pendiente]</h2>
-        <!-- TODO: decidir el mecanismo real de reservación:
-             ¿link directo a WhatsApp con mensaje precargado (como en el anuncio de Meta)?
-             ¿formulario? ¿calendario? No implementar hasta que se decida. -->
-        <a class="cta-button" href="#">[CTA — pendiente definir destino]</a>
+        <h2 id="s5">Esto no es una clase aburrida de finanzas.</h2>
+        <p>Y tampoco queremos que se sienta como una conferencia donde alguien habla durante dos horas mientras todos los demás miran el reloj.</p>
+        <p class="beats big">
+          <span>Es desayuno.</span>
+          <span>Es conversación.</span>
+          <span>Es hacer preguntas.</span>
+          <span>Es conocer gente.</span>
+        </p>
+        <p>Y sí…<br />vamos a hablar de dinero.</p>
+        <p>Pero también de algo mucho más importante:</p>
+        <p class="emphasis">qué queremos que ese dinero nos permita hacer con nuestra vida.</p>
+      </div>
+    </section>
+
+    <!-- 6 · POR QUÉ LO HACEMOS -->
+    <section aria-labelledby="s6">
+      <div class="container">
+        <h2 id="s6">Porque trabajar, pagar cuentas y repetirlo durante treinta años no puede ser todo el plan.</h2>
+        <p class="beats">
+          <span>Queremos tiempo.</span>
+          <span>Tiempo para hacer lo que nos apasiona.</span>
+          <span>Tiempo para compartir con nuestra familia.</span>
+        </p>
+        <p>Y recursos para disfrutar ese tiempo estando realmente presentes…<br />sin estar pensando todo el día en cómo vamos a pagar las cuentas o si alguien nos dará permiso para tomar vacaciones.</p>
+        <p>No creemos que el dinero sea el propósito.</p>
+        <p>Creemos que aprender a utilizarlo mejor puede ayudarnos a construir algo mucho más valioso:</p>
+        <p class="emphasis">una vida con mayor libertad, presencia e intención.</p>
+      </div>
+    </section>
+
+    <!-- 7 · CTA FINAL — "regresar a la mesa" -->
+    <section id="reservar" class="table" aria-labelledby="s7">
+      <div class="container">
+        <p class="eyebrow">Tu lugar en la mesa</p>
+        <h2 id="s7">Desayuno Financiero</h2>
+        <p class="when stacked">
+          <span>Sábados</span>
+          <span>10:00 AM</span>
+          <span>Irving, Texas</span>
+        </p>
+        <p class="small">La participación está sujeta a disponibilidad de lugares.</p>
+        <p>Toca el botón y escríbenos por WhatsApp. Te compartiremos la próxima fecha disponible, ubicación y demás detalles.</p>
+        <a class="cta" href="https://wa.me/14694357527?text=Hola%2C%20vi%20la%20p%C3%A1gina%20del%20Desayuno%20Financiero%20y%20me%20gustar%C3%ADa%20reservar%20un%20lugar%20para%20el%20pr%C3%B3ximo%20s%C3%A1bado." target="_blank" rel="noopener" data-track="whatsapp_click_final">Quiero reservar mi lugar</a>
+        <p class="micro">Abrir WhatsApp</p>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="closing" aria-labelledby="s8">
+      <div class="container">
+        <h2 id="s8">Una última cosa.</h2>
+        <p>No necesitas tener tu vida financiera resuelta para sentarte a esta mesa.</p>
+        <p>Nosotros tampoco creemos que la vida se trate de tenerlo todo resuelto.</p>
+        <p class="beats">
+          <span>Se trata de seguir aprendiendo.</span>
+          <span>Seguir tomando decisiones.</span>
+          <span>Seguir construyendo.</span>
+        </p>
+        <p>Y mientras siga entrando aire en nuestros pulmones…<br />todavía tenemos oportunidad de hacer algo diferente con lo que viene.</p>
+        <p class="signoff">Nos vemos en el desayuno.</p>
       </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Golden Group. [Texto de footer — pendiente]</p>
-    </div>
+    <p>Desayuno Financiero · Irving, Texas · <span id="year">2026</span></p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
