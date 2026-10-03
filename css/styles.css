@@ -354,25 +354,22 @@ p {
   margin: 0;
 }
 
-/* ---------- Espacio para foto real (pendiente) ---------- */
+/* ---------- Fotografías reales ---------- */
 
-.photo-slot {
-  margin: 0 auto;
-  max-width: 60rem;
-  aspect-ratio: 3 / 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed var(--coffee);
-  background: var(--bg-tint);
-  color: var(--coffee-dark);
-  font-weight: 700;
-  text-align: center;
-  padding: 1rem;
+.photo {
+  margin: 0;
 }
 
-.photo-slot[hidden] {
-  display: none;
+section .photo {
+  margin: 2.25rem 0 0;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: var(--bg-tint);   /* mientras carga */
 }
 
 /* ---------- Desktop: más aire ---------- */

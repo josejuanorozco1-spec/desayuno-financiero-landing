@@ -47,11 +47,15 @@
       </div>
     </section>
 
-    <!-- Espacio para foto real. Oculto en producción hasta que José entregue
-         material; se ve con ?fotos=1 en la URL. Ver README. -->
-    <figure class="photo-slot" data-photo-slot hidden>
-      <span>FOTO REAL PENDIENTE — la mesa del desayuno (assets/mesa.jpg)</span>
-    </figure>
+    <!-- FOTO 1 · La experiencia: "esto que acabas de leer existe" -->
+    <div class="container">
+      <figure class="photo">
+        <picture>
+          <source type="image/webp" srcset="assets/desayuno-experiencia-600.webp 600w, assets/desayuno-experiencia-900.webp 900w" sizes="(min-width: 37rem) 34rem, calc(100vw - 2.5rem)" />
+          <img src="assets/desayuno-experiencia-900.jpg" srcset="assets/desayuno-experiencia-600.jpg 600w, assets/desayuno-experiencia-900.jpg 900w" sizes="(min-width: 37rem) 34rem, calc(100vw - 2.5rem)" width="900" height="857" loading="lazy" decoding="async" alt="Durante un Desayuno Financiero, uno de los anfitriones explica un ejemplo junto a la mesa con un reloj de arena y una alcancía." />
+        </picture>
+      </figure>
+    </div>
 
     <!-- 2 · NO NECESITAS SER EXPERTO -->
     <section aria-labelledby="s2">
@@ -91,6 +95,15 @@
           <span>Quizá una respuesta.</span>
           <span>Quizá conozcas a un futuro cliente, colaborador o amigo.</span>
         </p>
+        <!-- FOTO 2 · Las conexiones: prepara "Uno nunca sabe quién…" -->
+        <figure class="photo">
+          <picture>
+            <source media="(max-width: 37.5rem)" type="image/webp" srcset="assets/desayuno-mesa-movil-720.webp 720w, assets/desayuno-mesa-movil-1095.webp 1095w" sizes="calc(100vw - 2.5rem)" width="1095" height="730" />
+            <source media="(max-width: 37.5rem)" srcset="assets/desayuno-mesa-movil-720.jpg 720w, assets/desayuno-mesa-movil-1095.jpg 1095w" sizes="calc(100vw - 2.5rem)" width="1095" height="730" />
+            <source type="image/webp" srcset="assets/desayuno-mesa-800.webp 800w, assets/desayuno-mesa-1400.webp 1400w" sizes="34rem" />
+            <img src="assets/desayuno-mesa-1400.jpg" srcset="assets/desayuno-mesa-800.jpg 800w, assets/desayuno-mesa-1400.jpg 1400w" sizes="34rem" width="1400" height="639" loading="lazy" decoding="async" alt="Asistentes de un Desayuno Financiero sentados a la mesa con café y desayuno, escuchando y conversando entre ellos." />
+          </picture>
+        </figure>
         <p class="emphasis">Uno nunca sabe quién puede estar sentado a su lado.</p>
       </div>
     </section>
@@ -116,7 +129,7 @@
     <!-- 5 · QUÉ TIPO DE EXPERIENCIA ES -->
     <section class="tinted" aria-labelledby="s5">
       <div class="container">
-        <h2 id="s5">Esto no es una clase aburrida de finanzas.</h2>
+        <h2 id="s5">Esto es una conversación sobre dinero que sí vas a querer tener.</h2>
         <p>Y tampoco queremos que se sienta como una conferencia donde alguien habla durante dos horas mientras todos los demás miran el reloj.</p>
         <p class="beats big">
           <span>Es desayuno.</span>

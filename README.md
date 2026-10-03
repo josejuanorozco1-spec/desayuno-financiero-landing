@@ -14,7 +14,7 @@ Repositorio independiente: no contiene ni referencia datos del vault/cerebro.
 index.html      # todo el contenido (HTML semántico, sin framework)
 css/styles.css  # estilos mobile-first, sin fuentes externas
 js/main.js      # tracking preparado + año del footer
-assets/         # fotos reales (vacío por ahora)
+assets/         # fotos reales del desayuno (JPG + WebP, 2 tamaños c/u)
 ```
 
 Ver en local: `python -m http.server 8080` → http://localhost:8080
@@ -53,7 +53,7 @@ Recomendado: que los anuncios que apunten aquí usen UTMs, p. ej.
 
 ## Pendientes
 
-- [ ] Fotos reales en `assets/` (los espacios están preparados: abrir la página con `?fotos=1` para verlos).
+- [x] Fotos reales en `assets/` (experiencia tras el hero; la mesa en "Y hay algo más").
 - [ ] Imagen Open Graph 1200×630 (`assets/og.jpg`) y descomentar las etiquetas `og:image` en `index.html`.
 - [ ] Meta Pixel / Analytics, cuando exista uno autorizado.
 - [ ] Dominio propio (opcional).

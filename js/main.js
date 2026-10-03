@@ -55,13 +55,6 @@
     });
   });
 
-  // Espacios para fotos reales: ocultos en producción, visibles con ?fotos=1
-  if (/[?&]fotos=1\b/.test(window.location.search)) {
-    document.querySelectorAll("[data-photo-slot]").forEach(function (el) {
-      el.hidden = false;
-    });
-  }
-
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 })();
